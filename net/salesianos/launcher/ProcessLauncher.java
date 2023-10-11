@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class ProcessLauncher {
     private final static String OUTPUT_ROUTE = "./net/salesianos/outputs/";
 
-    public static Process initVocalCounterProcess(ArrayList<String> lines, char vowel, String fileName) {
+    public static Process initVocalCounterProcess(String line, char vowel, String fileName) {
         ProcessBuilder processBuilder = new ProcessBuilder(
-                "java", "./net/salesianos/processes/VocalCounter.java", String.valueOf(vowel), lines.toString()
+                "java", "./net/salesianos/processes/VocalCounter.java", String.valueOf(vowel), line
         );
 
         Process javaProcess = null;
